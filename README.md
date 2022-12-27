@@ -1,6 +1,6 @@
 # Service
 
-It is used in example topologies (example_tree_4.yaml etc.,) in yaml_crds. 
+It is used in example topologies (example_tree_4.yaml etc.,) in yaml_crds of TAAC repo. 
 
 This directory holds the "mock-service" component. It is a
 relatively simple HTTP server which follows instructions from a YAML file and

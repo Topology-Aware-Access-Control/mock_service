@@ -1,0 +1,25 @@
+services:
+  - isEntrypoint: true
+    name: svc-0
+    numReplicas: 1
+    script:
+    - - call:
+          service: svc-0-0
+          size: 0B
+      - call:
+          service: svc-0-1
+          size: 0B
+    type: http
+  - name: svc-0-0
+    numReplicas: 1
+    type: http
+    script:
+    - call:
+        service: svc-0-2
+        size: 0B
+  - name: svc-0-1
+    numReplicas: 1
+    type: http
+  - name: svc-0-2
+    numReplicas: 1
+    type: http
